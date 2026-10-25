@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+
+	<title>Alpina | Pide con nosotros</title>
+</head>
+<body>
+	<header class="row">
+		<img src="img/logo.svg" alt="Logo de la compañía" class="col-12 col-sm-4 col-md-4 col-lg-1 col-xl-1">
+
+		<nav class="navbar navbar-expand-lg bg-body-tertiary col-12 col-sm-8 col-md-8 col-lg-11 col-xl-11">
+			<div class="container-fluid">
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar menú">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="productos.html">Productos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="pedidos.html">Pide con nosotros</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main class="container pedido my-4">
+		<h1 class="titulo-pedido text-center">PIDE CON NOSOTROS</h1>
+
+		<form id="formPedido" novalidate>
+			<div class="row g-4">
+
+				<!-- Columna izquierda -->
+				<div class="col-12 col-md-6">
+					<label for="nombre" class="etiqueta">Nombre</label>
+					<input type="text" id="nombre" class="campo" autocomplete="given-name">
+
+					<label for="apellido" class="etiqueta">Apellido</label>
+					<input type="text" id="apellido" class="campo" autocomplete="family-name">
+
+					<p class="etiqueta">Producto a pedir</p>
+					<div class="caja-opciones" id="listaProductos">
+
+						<div class="opcion-fila">
+							<label class="opcion">
+								<input type="checkbox" name="producto" value="Crema de leche">
+								<span>Crema de leche</span>
+							</label>
+							<div class="cantidad-control">
+								<button type="button" class="menos" aria-label="Disminuir Crema de leche">−</button>
+								<span class="cantidad">1</span>
+								<button type="button" class="mas" aria-label="Aumentar Crema de leche">+</button>
+							</div>
+						</div>
+
+						<div class="opcion-fila">
+							<label class="opcion">
+								<input type="checkbox" name="producto" value="Yogo yogo">
+								<span>Yogo yogo</span>
+							</label>
+							<div class="cantidad-control">
+								<button type="button" class="menos" aria-label="Disminuir Yogo yogo">−</button>
+								<span class="cantidad">1</span>
+								<button type="button" class="mas" aria-label="Aumentar Yogo yogo">+</button>
+							</div>
+						</div>
+
+						<div class="opcion-fila">
+							<label class="opcion">
+								<input type="checkbox" name="producto" value="Queso gruyere">
+								<span>Queso gruyere</span>
+							</label>
+							<div class="cantidad-control">
+								<button type="button" class="menos" aria-label="Disminuir Queso gruyere">−</button>
+								<span class="cantidad">1</span>
+								<button type="button" class="mas" aria-label="Aumentar Queso gruyere">+</button>
+							</div>
+						</div>
+
+						<div class="opcion-fila">
+							<label class="opcion">
+								<input type="checkbox" name="producto" value="Queso cottage">
+								<span>Queso cottage</span>
+							</label>
+							<div class="cantidad-control">
+								<button type="button" class="menos" aria-label="Disminuir Queso cottage">−</button>
+								<span class="cantidad">1</span>
+								<button type="button" class="mas" aria-label="Aumentar Queso cottage">+</button>
+							</div>
+						</div>
+
+						<div class="opcion-fila">
+							<label class="opcion">
+								<input type="checkbox" name="producto" value="Arequipe">
+								<span>Arequipe</span>
+							</label>
+							<div class="cantidad-control">
+								<button type="button" class="menos" aria-label="Disminuir Arequipe">−</button>
+								<span class="cantidad">1</span>
+								<button type="button" class="mas" aria-label="Aumentar Arequipe">+</button>
+							</div>
+						</div>
+
+						<div class="opcion-fila">
+							<label class="opcion">
+								<input type="checkbox" name="producto" value="Gelatina Boggy">
+								<span>Gelatina Boggy</span>
+							</label>
+							<div class="cantidad-control">
+								<button type="button" class="menos" aria-label="Disminuir Gelatina Boggy">−</button>
+								<span class="cantidad">1</span>
+								<button type="button" class="mas" aria-label="Aumentar Gelatina Boggy">+</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- Columna derecha -->
+				<div class="col-12 col-md-6">
+					<label for="celular" class="etiqueta">Celular</label>
+					<input type="tel" id="celular" class="campo" inputmode="numeric" maxlength="10" autocomplete="tel">
+
+					<label for="direccion" class="etiqueta">Dirección</label>
+					<input type="text" id="direccion" class="campo" autocomplete="street-address">
+
+					<p class="etiqueta">Forma de Pago</p>
+					<div class="caja-opciones">
+						<label class="opcion">
+							<input type="radio" name="pago" value="PSE">
+							<span>PSE</span>
+						</label>
+						<label class="opcion">
+							<input type="radio" name="pago" value="Tarjeta crédito/débito">
+							<span>Tarjeta crédito/<br>débito</span>
+						</label>
+						<label class="opcion">
+							<input type="radio" name="pago" value="Contraentrega">
+							<span>Contraentrega</span>
+						</label>
+					</div>
+
+					<button type="submit" class="boton-compra">Compra ahora</button>
+					<p id="mensaje" role="alert" aria-live="polite"></p>
+				</div>
+
+			</div>
+		</form>
+
+		<!-- Imagen inferior -->
+		<section class="mt-5">
+			<img src="img/sede.png" alt="Sede de Alpina" class="w-100 imagen-edificio">
+		</section>
+	</main>
+
+	<footer class="footer-contacto">
+		<div class="container-fluid">
+			<div class="row align-items-center text-center text-md-start gy-3">
+
+				<div class="col-12 col-md-4">
+					<h2 class="footer-titulo">Contáctanos</h2>
+					<p class="footer-texto">Cualquier inconveniente o duda,<br>comunícate a nuestros canales atención:</p>
+				</div>
+
+				<div class="col-12 col-md-4 text-center">
+					<a href="tel:018000529999" class="footer-telefono">
+						<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+							<path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/>
+						</svg>
+						018000 529 999
+					</a>
+				</div>
+
+				<div class="col-12 col-md-4 text-center">
+					<h3 class="footer-horario-titulo">Horario de atención</h3>
+					<p class="footer-horario">L-V 7:00am a 6:00pm</p>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script>
+		// Botones + y − de cada producto (mínimo 1, máximo 20)
+		document.querySelectorAll('.cantidad-control').forEach(function (control) {
+			var numero = control.querySelector('.cantidad');
+
+			control.querySelector('.mas').addEventListener('click', function () {
+				var valor = parseInt(numero.textContent, 10);
+				if (valor < 20) numero.textContent = valor + 1;
+			});
+
+			control.querySelector('.menos').addEventListener('click', function () {
+				var valor = parseInt(numero.textContent, 10);
+				if (valor > 1) numero.textContent = valor - 1;
+			});
+		});
+
+		// Validación y mensaje de compra
+		var formulario = document.getElementById('formPedido');
+		var mensaje = document.getElementById('mensaje');
+
+		formulario.addEventListener('submit', function (evento) {
+			evento.preventDefault();
+
+			var nombre = document.getElementById('nombre').value.trim();
+			var apellido = document.getElementById('apellido').value.trim();
+			var celular = document.getElementById('celular').value.trim();
+			var direccion = document.getElementById('direccion').value.trim();
+			var productos = formulario.querySelectorAll('input[name="producto"]:checked');
+			var pago = formulario.querySelector('input[name="pago"]:checked');
+
+			var faltantes = [];
+			if (nombre === '') faltantes.push('nombre');
+			if (apellido === '') faltantes.push('apellido');
+			if (!/^\d{10}$/.test(celular)) faltantes.push('celular (10 dígitos)');
+			if (direccion === '') faltantes.push('dirección');
+			if (productos.length === 0) faltantes.push('al menos un producto');
+			if (!pago) faltantes.push('forma de pago');
+
+			if (faltantes.length > 0) {
+				mensaje.className = 'mensaje-error';
+				mensaje.textContent = 'Por favor completa: ' + faltantes.join(', ') + '.';
+				return;
+			}
+
+			mensaje.className = 'mensaje-exito';
+			mensaje.textContent = '¡Compra exitosa! Gracias, ' + nombre + '.';
+
+			// Limpiar el formulario y las cantidades
+			formulario.reset();
+			document.querySelectorAll('.cantidad').forEach(function (n) {
+				n.textContent = '1';
+			});
+		});
+	</script>
+</body>
+</html>
